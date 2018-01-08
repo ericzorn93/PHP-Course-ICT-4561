@@ -1,0 +1,40 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf200
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red34\green45\blue53;}
+{\*\expandedcolortbl;;\cssrgb\c17647\c23137\c27059;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid1\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid101\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid201\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs32 \cf2 \expnd0\expndtw0\kerning0
+What is the significance of a form\'92s action attribute?\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8259 	}
+\b0 The form element tag in HTML is essential to almost every website and web application that is being used on the internet today. In order to make complete use of the form element, the developer needs to fully understand the element\'92s attributes and how to access the elements via a script. When declaring the action attribute on the form element tag in HTML5, it specifies a URL of where the form data is being submitted. This can be to a PHP script or even another HTML/PHP based web page that will then handle that form data. The data can be displayed to the user or can be handled via the script and sent over email, to a database, or any other forms of communication. Most of the time, the action attribute will generate a validated response to ensure the user that the information has been handled (via email, etc.) and is on its way. All of the logic is usually being processed via PHP in the background logic or with JavaScript and AJAX requests. According to W3 Schools, the action attribute is no longer required in HTML5, like it had been in the past. There are also two different types of URLs for the action string. There is an absolute URL, which is a full link that points to another website. There also is a relative URL, which points to another file within the website and root directory.\
+\pard\tx720\pardeftab720\partightenfactor0
+
+\b \cf2 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 What is the significance of a form\'92s method attribute? Is it more secure to use GET or POST? Which method type can be bookmarked in the browser?\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8259 	}
+\b0 Next to the form\'92s action attribute is always the method attribute. There are two different types of methods that can be used. One is known as GET and the other is known as POST. These two methods are HTTP protocol methods. HTTP allows the communication between the client and the server to occur. W3 Schools mentions that the GET method will request data from a specified source, while the POST method will submit data to be processed and posted to a specified source. More common than not, you will see the method of a form be set to POST. It is much more secure to use the POST method versus the GET method when dealing with user information. This is because GET requests can be cached, remain the the browser history, bookmarked, and have length restrictions to mention just a few. W3 Schools also mentions that GET requests should never be used when dealing with sensitive data and should only be used to retrieve data from the server. POST requests can never be cached, do not remain in browser history, cannot be bookmarked, and do not not have restrictions on data length. There are other less common request methods like HEAD, PUT, DELETE, OPTIONS, and CONNECT. These can be accessed for more information through this URL: {\field{\*\fldinst{HYPERLINK "https://www.w3schools.com/tags/ref_httpmethods.asp"}}{\fldrslt https://www.w3schools.com/tags/ref_httpmethods.asp.\
+\pard\tx720\pardeftab720\partightenfactor0
+
+\b \cf2 \expnd0\expndtw0\kerning0
+\
+}}\pard\pardeftab720\partightenfactor0
+
+\b \cf2 \expnd0\expndtw0\kerning0
+What predefined variable will contain the data from a form submission?\'a0{\field{\*\fldinst{HYPERLINK "https://www.w3schools.com/tags/ref_httpmethods.asp"}}{\fldrslt \
+}}\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8259 	}
+\b0 There are many different forms of variables in the PHP language that are predefined. These are most of the time built into the PHP Superglobal family and are always available in all scopes throughout the document. Some of these predefined variables that are common within PHP and HTML forms are $_SERVER, $_GET, $_POST, $_FILES, $_REQUEST, $_SESSION, $_COOKIE, and other less common variables that can be found here on PHP.net: {\field{\*\fldinst{HYPERLINK "http://php.net/manual/en/reserved.variables.php"}}{\fldrslt http://php.net/manual/en/reserved.variables.php }}. The $_SERVER variable blows for server and execution environment information that the web application is running on. $_GET is the lesser used of the two most common predefined variables because of the reasons mentioned in the previous question. It gains access to all HTTP GET variables posted on a web page or specifically an HTML form. On the contrary, $_POST is used quite frequently. It gains access to all HTTP POST variables in a document. The $_FILES variable, as it sounds, gains access to all of the HTTP file uploads from an HTML document and or form. $_REQUEST gains access to all of the general HTTP request variables (both GET and POST). $_SESSION allows the PHP script to gain access to all of the variables that start with that given session. These are usually started with session_start() function and are reset every time the browser window is closed and the page has to reload. This can also be found in JavaScript with SessionStorage versus LocalStorage data caching. Lastly, $_COOKIE is often used to identify a user. It is a small file that the server will embed on a user\'92s computer/internet browser. Each time the computer will request a page in the browser, the cookies will be sent as well. After 30 days, cookies will expire. The information for a cookie can be stored in PHP variables and then used through the setcoookie() function. It takes the name, value, expiration date, path, domain, secure, and httponly parameters. That information can then be used in the website for other purposes of information to be generated or utilized.{\field{\*\fldinst{HYPERLINK "http://php.net/manual/en/reserved.variables.php"}}{\fldrslt 
+\b \expnd0\expndtw0\kerning0
+\
+}}}
