@@ -1,0 +1,77 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf200
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 Times-Roman;\f2\fmodern\fcharset0 Courier;
+}
+{\colortbl;\red255\green255\blue255;\red34\green45\blue53;\red251\green0\blue7;\red0\green0\blue0;
+\red146\green26\blue32;\red0\green0\blue194;\red0\green0\blue173;\red252\green106\blue8;\red13\green103\blue1;
+\red210\green0\blue5;\red251\green2\blue7;}
+{\*\expandedcolortbl;;\cssrgb\c17647\c23137\c27059;\cssrgb\c100000\c0\c0;\cssrgb\c0\c0\c0;
+\cssrgb\c64706\c16471\c16471;\cssrgb\c0\c0\c80392;\cssrgb\c0\c0\c73333;\cssrgb\c100000\c50196\c0;\cssrgb\c0\c46667\c0;
+\cssrgb\c86667\c0\c0;\cssrgb\c100000\c14913\c0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid1\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\vieww12380\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs32 \cf2 \expnd0\expndtw0\kerning0
+How do you define a constant? Are constant names case-sensitive or case-insensitive? How do you check if a constant has been defined?\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8259 	}
+\b0 W3 Schools defines a constant in PHP as an identifier or name for a simpler value. Just like in other languages and as the name implies, contents cannot be changed during the script, once they are declared. Usually, valid constant names begin with a letter or an underscore and do not include a \'93$\'94 sign before the constant name like most other variables. Also, all constants are automatically global across the entire PHP script, unlike other normally declared variables. In order to declare a constant, the developer must use the define() function. Inside of that function, there are three different possible parameters. The first is the name and specifies the name of the constant variable. The second parameter is the value and specifies the value of the constant, instead of writing a variable like $var = 10;. Also, the last parameter is specifying whether the constant name should be case-insensitive. The default is false. This means that by default, the constant will always be capitalized and case-sensitive, unless the last parameter is set to true in the define function. To check if a constant variable exists, the developer can use a similarly name function to the original. This function is known as defined(). You can check with a conditional statement to see if the constant has been defined as well by passing the constant name as string to the defined function parameter. There also some other related PHP functions as well. These consist of constant(), which returns the value of a constant passed into the function and get_defined_constant(), which returns an associative array with the names of all constants and their values. There is also a similar function called function_exists() which will return TRUE if the given function has been defined. Commonly, the bool identifier will be placed before the defined() function to return a True or False value. Here are some examples of case-sensitive versus case-insensitive constants in the code.\
+\pard\tx720\pardeftab720\partightenfactor0
+
+\b \cf2 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f1\b0\fs24 \cf3 \outl0\strokewidth0 \strokec3 <?php\cf4 \strokec4 \
+define(\cf5 \strokec5 "GREETING"\cf4 \strokec4 , \cf5 \strokec5 \'93Hello class!!\'94\cf4 \strokec4 );\
+\cf6 \strokec6 echo\cf4 \strokec4  GREETING; // case-sensitive \
+\cf3 \strokec3 ?>\cf4 \strokec4  \
+\
+\cf3 \strokec3 <?php\cf4 \strokec4 \
+define(\cf5 \strokec5 "GREETING"\cf4 \strokec4 , \cf5 \strokec5 \'93Hello class!!\'94\cf4 \strokec4 , true);\
+\cf6 \strokec6 echo\cf4 \strokec4  greeting; // case-insensitive \
+\cf3 \strokec3 ?>\cf4 \strokec4  \
+\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f2 \cf7 \strokec7 <?php\
+\cf8 \strokec8 /*\'a0Note\'a0the\'a0use\'a0of\'a0quotes,\'a0this\'a0is\'a0important.\'a0\'a0This\'a0example\'a0is\'a0checking\
+\'a0*\'a0if\'a0the\'a0string\'a0'TEST'\'a0is\'a0the\'a0name\'a0of\'a0a\'a0constant\'a0named\'a0TEST\'a0*/\
+\cf9 \strokec9 if\'a0(\cf7 \strokec7 defined\cf9 \strokec9 (\cf10 \strokec10 'TEST'\cf9 \strokec9 ))\'a0\{\
+\'a0\'a0\'a0\'a0echo\'a0\cf7 \strokec7 TEST\cf9 \strokec9 ;\
+\}\
+\cf7 \strokec7 ?>\cf4 \strokec4  
+\f1 \
+\
+\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\b \cf4 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs32 \cf2 \outl0\strokewidth0 What is the significance of $_SERVER['REQUEST_METHOD']?\
+- 
+\b0 Commonly, people confuse the $_SERVER[\'91REQUEST_METHOD\'92] with the $_POST superglobal variable. There is indeed a difference. The \cf2 $_SERVER[\'91REQUEST_METHOD\'92] will contain the request method to the server via HTTP (GET, POST, PUT). On the other hand, $_POST will contain any of the data that is being sent with that superglobal. Interestingly enough, it is possible for a POST request to be sent while it does not contain any data. An article on StackOverflow gives a unique way to accomplish the same task as $_POST with the $_SERVER[\'91REQUEST_METHOD\'92]. Below is how it would be written. This would allow the developer to send a post request without any post data. Another example of why the 
+\b \cf2 $
+\b0 \cf2 _SERVER['REQUEST_METHOD'] is used instead of $_POST[\'93name\'94] is because it will return and check if all POST variables are set versus one specific variable at a time. This will save the programming need to repeatedly check individual user inputs versus checking them all at once with the server method. This will return the method of interaction with the server, often either GET or POST. There also many other values like SERVER_NAME, HTTP_HOST, SERVER_SOFTWARE, DOCUMENT_ROOT, PHP_SELF (current page) and many more.\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs24 \cf11 \outl0\strokewidth0 \strokec4 if ($_SERVER['REQUEST_METHOD'] == 'POST\'92)\
+			vs.\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf11 if (ISSET($_POST["SUBMIT"])) \cf4 \
+\pard\pardeftab720\partightenfactor0
+\cf11 \
+{\field{\*\fldinst{HYPERLINK "https://www.youtube.com/watch?v=BDQO4iFywQg"}}{\fldrslt 
+\f0\fs32 \cf4 https://www.youtube.com/watch?v=BDQO4iFywQg}}
+\f0\fs32 \cf4 \
+{\field{\*\fldinst{HYPERLINK "https://www.youtube.com/watch?v=oVJ0anq8yLA"}}{\fldrslt https://www.youtube.com/watch?v=oVJ0anq8yLA}}
+\f1\fs24 \cf4 \
+\
+\pard\tx720\pardeftab720\partightenfactor0
+
+\f0\b\fs32 \cf2 \outl0\strokewidth0 \
+}

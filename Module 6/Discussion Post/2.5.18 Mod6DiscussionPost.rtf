@@ -1,0 +1,31 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf200
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red34\green45\blue53;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c17647\c23137\c27059;\cssrgb\c100000\c100000\c100000;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid1\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid101\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl360\sa240\partightenfactor0
+
+\f0\b\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 How do the path and domain arguments to the setcookie() function affect the accessibility of the cookie?\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360\sa240\partightenfactor0
+\ls1\ilvl0\cf2 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8259 	}
+\b0 In the setcookie() function, both of the path and domain arguments are considered to be optional and are not required for the function to execute properly. The two main arguments that are required for the function to execute are the name and the value of the cookie. This allows the browser that the user is on to assign a key/name value pair into the cookie storage on the device. The third parameter is also very popular, but is not required. This parameter is known as the expire argument and will take in a numerical amount of time for the cookie to expire with the information that is being stored. By default, if the cookie value is omitted or set to zero, the cookie will expire at the end of the user\'92s browser session. Also, with cookies and their functionality, if the user visits the same webpage in multiple different browsers, the cookie will be identified on each browser individually. The less popular argument of domain is optional and will set the specific domain name for the cookie. If you set the parameter to equal a string of \'93/\'93, this will allow the cookie to be accessed over the entire domain of the website. If you specify a sub-directory folder, it will only be allowed to be accessed within those sub-directory files. The default value is going to be set for the domain folder that the file is in. If you set the domain argument to the main domain page (www.google.com), it will set the cookie for all subdomains. However, if the developer has set the cookie for a subdomain in the page, it would not execute properly. The path will allow the cookie to be set on the parent domain and all subdomains would have access to that path. This is important if the developer would only like certain pages to access the cookie information.\
+\ls1\ilvl0
+\b {\listtext	\uc0\u8259 	}
+\b0 The other two parameters are also optional and are titled secure and httponly. Secure simply defines if the cookie should be sent over a secured HTTP connection which is also known as HTTPS. HTTPOnly is a boolean value parameter and when set to true, it will only be accessible via HTTP and will not be accessible to scripting languages like JavaScript. Therefore, it can help reduce the risk of cross-server scripting attacks by malicious users.\
+\ls1\ilvl0
+\b {\listtext	\uc0\u8259 	}{\field{\*\fldinst{HYPERLINK "https://www.w3schools.com/php/func_http_setcookie.asp"}}{\fldrslt 
+\b0 https://www.w3schools.com/php/func_http_setcookie.asp}}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \uc0\u8232 \cb3 \
+\pard\pardeftab720\sl360\sa240\partightenfactor0
+\cf2 What function must every page call if it needs to assign or access session data?\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360\sa240\partightenfactor0
+\ls2\ilvl0
+\b0 \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8259 	}Before assigning and or accessing any data from the server and its session, the developer needs to define the beginning of the session. This is done with the simple session_start() function. This often does not take any parameters and will be identified at the top of the page before the headers are sent to the browser or the server. Just like all of the PHP superglobal variables, the $_SESSION[\'91\'92] variable will return in the form of an associative array. Before assigning or retrieving any keys and values to the array, the session_start() function must be displayed at the top and called in the script (cannot be commented out). Similar to the setcookie() function that was mentioned above, the session_start() function will start a single session that will terminate as soon as the browser window has been closed by the developer. Session variables are required to store and hold on to information for the session duration, that can then be passed and used across multiple pages within the site. These are often used to store information about the user and their interaction with a form or other data on the web page. The session_unset() function without any parameter given will remove all session variables that have been set. The session_destroy() function will destroy the entire session and all of the data related to the session. \
+{\listtext	\uc0\u8259 	}{\field{\*\fldinst{HYPERLINK "https://www.w3schools.com/php/php_sessions.asp"}}{\fldrslt https://www.w3schools.com/php/php_sessions.asp}}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+}

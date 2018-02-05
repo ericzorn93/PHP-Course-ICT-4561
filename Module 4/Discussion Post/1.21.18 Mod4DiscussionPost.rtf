@@ -1,0 +1,176 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf200
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset0 Menlo-Bold;
+}
+{\colortbl;\red255\green255\blue255;\red34\green45\blue53;\red255\green255\blue255;\red109\green109\blue109;
+\red26\green28\blue28;\red133\green96\blue154;\red153\green168\blue186;\red86\green132\blue173;\red191\green100\blue38;
+\red88\green118\blue71;\red34\green45\blue53;\red153\green168\blue186;\red26\green28\blue28;\red109\green109\blue109;
+}
+{\*\expandedcolortbl;;\cssrgb\c17647\c23137\c27059;\cssrgb\c100000\c100000\c100000;\csgenericrgb\c42745\c42745\c42745;
+\csgenericrgb\c10196\c10980\c10980;\csgenericrgb\c52157\c37647\c60392;\csgenericrgb\c60000\c65882\c72941;\csgenericrgb\c33725\c51765\c67843;\csgenericrgb\c74902\c39216\c14902;
+\csgenericrgb\c34510\c46275\c27843;\cssrgb\c17647\c23137\c27059;\csgenericrgb\c60000\c65882\c72941;\csgenericrgb\c10196\c10980\c10980;\csgenericrgb\c42745\c42745\c42745;
+}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid1\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid101\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid201\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid301\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f0\b\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+What is the basic structure of an if conditional in PHP? An if-else conditional? An if-elseif? An if-elseif-else?\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360\partightenfactor0
+\ls1\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8259 	}
+\b0 When structuring conditional statements in PHP, there are just a few rules that have to be followed. The syntax starts with a simple 
+\i\b if 
+\i0\b0 statement and that consists of the PHP Keyword, followed by a set of parentheses and then an opening and closing curly bracket. The conditional statement will be placed within the parentheses and the logic portion will be included within the opening and closing curly braces. The conditional check in the parentheses will be evaluated to be true or false value. Most of the time, the check is to see if the statement is true, however you can check if something is not equal with the != operator which will still render true. If the condition is not met and renders false, you can then write an 
+\i\b else-if
+\i0\b0  statement. This directly follows the 
+\i\b if 
+\i0\b0 statement\'92s closing bracket. The second condition for the 
+\i\b else-if 
+\i0\b0 statement is also put inside of the parentheses and evaluated to be true or false. The logic within the 
+\i\b else-if 
+\i0\b0 statement will only run if the first 
+\i\b if 
+\i0\b0 condition is not met. The developer can write an infinite amount of 
+\i\b else-if 
+\i0\b0 statements, one after another. When none of these statements are properly ran, the developer can then run the code with the 
+\i\b else 
+\i0\b0 statement. With 
+\i\b else
+\i0\b0 , there does not need to be any parentheses for conditional logic. Essentially, any of the code placed within the 
+\i\b else\'92s 
+\i0\b0 code brackets will only execute when the other conditions are not met. Another way to think of how these statements run is: if this happens, do this. If not, do this. Here is an example: \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf4 \cb5 // Variable\
+\cf6 $number \cf7 = \cf8 10\cf9 ;\
+\
+\cf4 // Conditional Statements\
+
+\f2\b \cf9 if 
+\f1\b0 \cf7 (\cf6 $number \cf7 === \cf8 20\cf7 ) \{\
+    
+\f2\b \cf9 echo 
+\f1\b0 \cf10 "This is 20"\cf9 ;\
+\cf7 \} 
+\f2\b \cf9 elseif 
+\f1\b0 \cf7 (\cf6 $number \cf7 === \cf8 30\cf7 ) \{\
+    
+\f2\b \cf9 echo 
+\f1\b0 \cf10 "This number is 30"\cf9 ;\
+\cf7 \} 
+\f2\b \cf9 elseif 
+\f1\b0 \cf7 (\cf6 $number \cf7 === \cf8 100\cf7 ) \{\
+    
+\f2\b \cf9 echo 
+\f1\b0 \cf10 "This number is 100"\cf9 ;\
+\cf7 \} 
+\f2\b \cf9 elseif 
+\f1\b0 \cf7 (\cf6 $number \cf7 === \cf8 10\cf7 ) \{\
+    
+\f2\b \cf9 echo 
+\f1\b0 \cf10 "This number is 10"\cf9 ;\
+\cf7 \} 
+\f2\b \cf9 else 
+\f1\b0 \cf7 \{\
+    
+\f2\b \cf9 echo 
+\f1\b0 \cf10 "None of the numbers match"\cf9 ;\
+\cf7 \}\
+\pard\tx720\pardeftab720\sl360\partightenfactor0
+
+\f0\b\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl360\partightenfactor0
+\cf11 \cb3 \outl0\strokewidth0 \strokec11 What are the differences between the empty() and isset() functions?\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360\partightenfactor0
+\ls2\ilvl0\cf11 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8259 	}
+\b0 Although both these functions are similar, they tend to be very different. Each of these functions is used to test the value of a variable. There also is a function known as is_null() to test of the variable is equal to the null value. The isset() function will only return true when the variable is not null. It is often seen when using form handling in PHP to test and see if an input value has been set and posted over the URL. The isset() will not render true when the value of a variable is equal to null. Empty() is used to determine if a variable is empty. It will return true if the variable is set to an empty string, false, an empty array(), NULL, \'930?, 0, and an unset variable. This is different from isset() because it will allow the function to return true if the variable has a null value assignment. The last function is_null() will be used to return true if the variable\'92s value is null. It can be known to be opposite of isset() because it can only be ran on a variable that has been declared. Isset() can be applied to unknown variables. Here are the examples below:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf4 \cb5 // Isset()\
+\cf6 $name \cf7 = \cf10 "Eric Zorn"\cf9 ;\
+
+\f2\b if 
+\f1\b0 \cf7 (
+\f2\b \cf9 isset
+\f1\b0 \cf7 (\cf6 $name\cf7 )) \{\
+    
+\f2\b \cf9 echo 
+\f1\b0 \cf10 "Name has been set"\cf9 ;\
+\cf7 \}\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf12 \cb13 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf4 \cb5 // Empty()\
+\cf6 $age \cf7 = \cf10 ""\cf9 ;\
+
+\f2\b if 
+\f1\b0 \cf7 (
+\f2\b \cf9 empty
+\f1\b0 \cf7 (\cf6 $age\cf7 )) \{\
+    
+\f2\b \cf9 echo 
+\f1\b0 \cf10 "The variable is empty"\cf9 ;\
+\cf7 \}\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf4 // Is_Null()\
+\cf6 $job \cf7 = 
+\f2\b \cf9 null
+\f1\b0 ;\
+
+\f2\b if 
+\f1\b0 \cf7 (is_null(\cf6 $job\cf7 )) \{\
+    
+\f2\b \cf9 echo 
+\f1\b0 \cf10 "The job variable is null"\cf9 ;\
+\cf7 \}\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360\partightenfactor0
+
+\f0\fs32 \cf2 \cb3 \
+\pard\pardeftab720\sl360\partightenfactor0
+
+\b \cf11 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec11 What is the syntax for explode()? For implode()?\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360\partightenfactor0
+\ls3\ilvl0\cf11 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8259 	}
+\b0 The explode function is used to break a string into an array. It takes in three arguments. They are the separator, the string, and the limit. The separator argument tells where to explode the string (at a specific symbol or open space). The string argument takes in the the string that needs to be split. Lastly, the limit takes in the amount of array items that the string will be split into. The default limit is the length of the entire string.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf4 \cb5 // Explode\
+\cf6 $string \cf7 = \cf10 \'93Hey class, my name is Eric Zorn.\'94\cf9 ;\
+\cf7 print_r (explode(\cf10 " "\cf9 ,\cf6 $string\cf9 , \cf8 7\cf7 ))\cf9 ;\
+\pard\tx720\pardeftab720\sl360\partightenfactor0
+
+\f0\b\fs32 \cf11 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec11 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360\partightenfactor0
+\ls4\ilvl0\cf11 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8259 	}
+\b0 Implode() returns a string from the elements of an array. Essentially, this is doing the complete opposite from the explode() function. It takes in two parameters in any order It is recommended you follow the documentation and follow the order of arguments from the explode() function. W3 Schools states that the separator parameter is optional, but it is recommended to use two parameters for proper backwards compatibility. It is commonly written as 
+\i implode(separator, array)
+\i0 . The default separator if not provided is an empty string. Here is an example:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf14 \cb13 // Implode\cf6 \cb5 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf6 $array \cf7 = [\cf10 "My"\cf9 , \cf10 "name"\cf9 , \cf10 "is"\cf9 , \cf10 "Eric"\cf9 , \cf10 "Zorn"\cf9 , \cf10 "and"\cf9 , \cf10 "I"\cf9 , \cf10 "am"\cf9 , \cf8 22\cf9 , \cf10 "years"\cf9 , \cf10 "old"\cf7 ]\cf9 ;\
+
+\f2\b echo 
+\f1\b0 \cf7 implode(\cf10 " "\cf9 , \cf6 $array\cf7 )\
+\pard\tx720\pardeftab720\sl360\partightenfactor0
+
+\f0\b\fs32 \cf11 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec11 \
+\
+Resources:\
+{\field{\*\fldinst{HYPERLINK "https://www.w3schools.com/php/func_string_implode.asp"}}{\fldrslt https://www.w3schools.com/php/func_string_implode.asp}}\
+{\field{\*\fldinst{HYPERLINK "https://www.w3schools.com/php/func_string_explode.asp"}}{\fldrslt https://www.w3schools.com/php/func_string_explode.asp}}\
+{\field{\*\fldinst{HYPERLINK "https://www.virendrachandak.com/techtalk/php-isset-vs-empty-vs-is_null/"}}{\fldrslt https://www.virendrachandak.com/techtalk/php-isset-vs-empty-vs-is_null/}}\
+{\field{\*\fldinst{HYPERLINK "https://www.w3schools.com/php/php_if_else.asp"}}{\fldrslt https://www.w3schools.com/php/php_if_else.asp}}\
+}

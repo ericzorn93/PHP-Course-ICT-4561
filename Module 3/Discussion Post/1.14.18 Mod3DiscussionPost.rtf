@@ -1,0 +1,45 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf200
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red34\green45\blue53;}
+{\*\expandedcolortbl;;\cssrgb\c17647\c23137\c27059;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid1\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid101\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid201\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}}
+\margl1440\margr1440\vieww14160\viewh16060\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs32 \cf2 \expnd0\expndtw0\kerning0
+Why must an HTML page that contains a form that\'92s being submitted to a PHP script be loaded through a URL?\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0
+\b0 \cf2 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8259 	}When submitting data via an HTML form to a PHP script, the data is almost always going to be submitted via a URL in the web browser. There are many reasons for this, with the main one being that PHP is executed and interpreted over the server. When using GET or POST HTTP protocol methods, the information is always going to be sent over the server via the URL. The difference is that the information will publicly be displayed in the URL when the developer chooses to submit the script with the GET method. The information is sent via the server, instead of other languages like JavaScript that are run on the client side. The HTML is described by the MDN (Mozilla Developer Network) as nothing more than a convenient user-friendly way to configure an HTTP request of data to the server. Commonly this is done with an AJAX call in JavaScript with many lines of scripting code. The HTTP request consists of two parts, a header with a set of meta data with the browser and the other with a body. The body contains information that is necessary for the server to process the specific request. The information, with GET, is sent via the URL in name/value pairs like an associative array. The information includes a question mark that is followed by the name/value pairs and an ampersand to separate the different pairs of data. When using the POST, the same data is sent privately over the server. Using PHP makes it easy to communicate to the server from the client and vice versa. The data can be stored in variables and echoed or stored from the server/database of client. This information is sent as a long string and then parsed by the server into the proper name/value pairs.
+\b \expnd0\expndtw0\kerning0
+ 
+\b0 This information sent over the server has to be secured, due to XSS and CSRF (Cross-Site Scripting and Cross-Site Request Forgery), SQL Injection, and HTTP header injection. If the information was not sent via the URL to the server, there would not be any processing of logic that would properly run, in this case with PHP. In other languages like JavaScript and Python, this can be done with AJAX calls (Asynchronously) to the server and parsed back to the client properly. The data can then be handled properly, depending on how the developer would like.\
+\pard\tx720\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\partightenfactor0
+
+\b \cf2 What functions can be used to format numerical values? How do you format numbers to a specific number of decimals?
+\b0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8259 	}The main function that is used for formatting numerical values in PHP is the number_format() function. This allows the developer to format a grouped number in the format of thousands. An example of this would be echo number_format(10000). This would translate to the 10,000 number format that we are currently used to seeing. The function can take in multiple parameters like the number, the amount of decimals, the type of decimal point (comma), and the separator. There is also the money_format() function which allows to format a number as a currency string. This allows the developer to enter a certain number and echo out that number formatted into a currency string that is formatted for the browser. Although the browser commonly will coerce the type into the necessary value for you, the int() and float() functions can specifically format the number into the proper numerical datatype. Opposed to other programming languages, you would enter (int)$number instead of int($number). This may take some time to get used to for many developers. There are also many other functions like the round() function to round a floating point numerical value to the nearest whole valued number. Another function is the is_numeric() function, which will test a value and return true or false based on the incoming datatype. Although there are many other useful numerical format functions, the array_sum() function can be used to calculate and return the sum for all numerical values in a given array. In order to format numbers into a specific number of decimals, it can utilize the number_format() function or even the sprintf() function. This allows a string of the amount of proper amount of decimal places and the second parameter, the original number. The function returns the formatted number. There also is the floor() function which is used to remove al decimal places. The abs() function calculates and returns a positive value of the number and the pow() function takes in the number as the first parameter. The second parameter is the desired exponent. There are many different powerful functions that are used to properly format numerical values in the PHP programming language.\
+\pard\tx720\pardeftab720\partightenfactor0
+\cf2 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\partightenfactor0
+
+\b \cf2 What is the importance of operator precedence?
+\b0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8259 	}Operator precedence determines the order the operations in an expression are evaluated when there are certain numerical operators being utilized. This can be also related to commonly in math programs as the order of operations. When two operators share an operand, the operator with the higher precedence goes first. An example 1 + 5 * 3 is evaluated by the interpreter. The answer to this is 16 and not 18 because the multiplication operator has slightly more precedence than the addition operator. If the expression was (1+5)*3, the answer would then be 18. This is because the parentheses define the precedence of the order of operations. The 1+5 is executed before the *3. After the parentheses, the number is then multiplied times three. There are many different operators that can be used in PHP that also relate to other programming languages for order of operations and comparison of different numbers. If the operator precedence was not important or utilized correctly, calculating a specific value might return the wrong value. The example above is a small version of what could be done in a professional program, however, shows that simply forgetting the parentheses can return a different value. When using calculations for money, conversions, distance, or any other form of calculator logic, having an accurate return value is imperative. The wrong order of operations can lead to further issues with your code in the future.\
+\pard\tx720\pardeftab720\partightenfactor0
+\cf2 \expnd0\expndtw0\kerning0
+\
+Link References: http://php.net/manual/en/language.operators.precedence.php, https://www.w3schools.com/php/, https://developer.mozilla.org/en-US/docs/Glossary/PHP\
+\
+Thanks,\
+Eric Zorn\
+}
