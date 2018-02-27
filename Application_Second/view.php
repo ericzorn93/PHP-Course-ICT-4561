@@ -6,6 +6,9 @@
  * Time: 1:45 PM
  */
 
+// Database Connection
+include "inc/logic/db_connect.php";
+
 // Functions
 include "inc/logic/functions.php";
 
